@@ -46,7 +46,7 @@ const Login = () => {
                 </div>
                 <div>
                     <label htmlFor='password'>PASSWORD</label>
-                    <input onChange={onChange} id='password' name='passwrod' type='password' />
+                    <input onChange={onChange} id='password' name='password' type='password' />
                 </div>
                 <div>
                     <button>SUBMIT</button>
