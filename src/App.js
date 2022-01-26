@@ -22,11 +22,11 @@ function App() {
           <Redirect to='/' />
         </Route>
 
-        <Route exact path='friends'>
+        <Route exact path='/friends'>
           <FriendsList />
         </Route>
 
-        <Route exact path='friends/add'>
+        <Route exact path='/friends/add'>
           <AddFriend />
         </Route>
       </div>
