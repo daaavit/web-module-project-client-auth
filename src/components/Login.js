@@ -1,8 +1,6 @@
 import axios from 'axios'
-import { response } from 'msw'
 import { useHistory } from 'react-router-dom'
 import React, { useState } from 'react'
-
 
 
 const Login = () => {
@@ -16,6 +14,7 @@ const Login = () => {
     })
 
     const onChange = (e) => {
+         console.log(credentials)
         setCredentials({
             ...credentials,
             [e.target.name]:e.target.value
@@ -24,9 +23,11 @@ const Login = () => {
     }
 
     const submitHandler = (e) => {
+        
         e.preventDefault();
         axios.post('http://localhost:9000/api/login', credentials)
             .then(r => {
+               
                 localStorage.setItem('token', r.payload)
                 push('/friends')
             })
